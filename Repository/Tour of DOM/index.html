@@ -4,36 +4,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tour of DOM</title>
     <style>
         h1 {
             color: gold;
         }
-
-        #food-title {
+        #food-title{
             color: green;
             /* margin-left: 20px; */
             /* marginLeft */
             /* background-color: lightgreen; */
         }
 
-        .bg-red {
+        .bg-red{
             background-color: red;
         }
 
-        .bold {
+        .bold{
             font-weight: 100;
         }
 
-        .big {
+        .big{
             font-size: 3em;
         }
 
-        .food .foreign {
+        .food .foreign{
             font-weight: 700;
         }
     </style>
-    <link rel="stylesheet" href="Module_1.css">
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 
 <body>
@@ -44,8 +43,7 @@
         <section id="old-dhaka" class="songs">
             <h1>Welcome to my DOM</h1>
             <p>
-                Lorem ipsum dolor <span>oli goli</span> amet consectetur adipisicing elit. <span>Alias</span>,
-                temporibus!
+                Lorem ipsum dolor <span>oli goli</span> amet consectetur adipisicing elit. <span>Alias</span>, temporibus!
             </p>
             <h1>asdf asdf <span>Some text</span> </h1>
             <ul>
@@ -80,20 +78,29 @@
         </section>
     </main>
     <script>
-        console.log("JS from inside the HTML file")
+        // console.log('Hello from JavaScript!!!')
+        // console.log('Hello bole chole gelo')
+        // console.log('Document Object Model');
+
+        const student = {
+            name: 'Abul mia',
+            id: 121,
+            study: function (subject) {
+                console.log('studying subject: ', subject);
+            }
+        }
+
         // document.getElementsByTagName
 
         const liCollection = document.getElementsByTagName('li');
         // console.log(liCollection);
         for (const li of liCollection) {
-            // console.log(li)
             // console.log(li.innerText)
         }
 
         // all h1 tags
         const allHeadings = document.getElementsByTagName('h1');
         for (const heading of allHeadings) {
-            // console.log(heading)
             // console.log(heading.innerText)
         }
 
@@ -109,18 +116,21 @@
         const foreignElements = document.getElementsByClassName('foreign');
         // console.log(foreignElements);
 
-        for (const element of foreignElements) {
+        for(const element of foreignElements){
             // console.log(element.innerText)
         }
 
         // query selector all
         const spanElements = document.querySelectorAll('#old-dhaka p span');
-        for (const span of spanElements) {
+        for(const span of spanElements){
             // console.log(span.innerText)
         }
-        
+
     </script>
-    <script src="Module_1.js"></script>
+    <script src="js/hello.js"></script>
+    <script src="js/cssInJS.js"></script>
+    <script src="js/child.js"></script>
+    <script src="js/append.js"></script>
 </body>
 
 </html>
