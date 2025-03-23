@@ -13,11 +13,11 @@ placesSection.appendChild(h1);
 const ul = document.createElement('ul');
 
 const li1 = document.createElement('li');
-li1.innerText= 'bandorbon';
+li1.innerText = 'bandorbon';
 ul.appendChild(li1);
 
 const li2 = document.createElement('li');
-li2.innerText= 'Sundorbon';
+li2.innerText = 'Sundorbon';
 ul.appendChild(li2)
 
 
@@ -59,7 +59,7 @@ playersList.appendChild(newChild);
 // const sections = document.getElementsByTagName('section');
 const sections = document.querySelectorAll('section')
 // console.log(sections);
-for(const section of sections){
+for (const section of sections) {
     // console.log(section);
     section.style.backgroundColor = 'lightblue'
     section.style.border = '3px solid green';
@@ -68,36 +68,10 @@ for(const section of sections){
     section.style.padding = '10px';
 }
 
+// const placeContainer = document.getElementById('places-container');
+// placesContainer.style.backgroundColor = 'yellow';
 
 // dynamic class
-for(const section of sections){
+for (const section of sections) {
     // section.classList.add('section-card')
 }
-
-// First
-console.log('first file')
-
-const allSections = document.getElementsByTagName('section');
-console.log(allSections)
-
-const firstTitle = document.getElementById('first-title');
-console.log(firstTitle.innerText);
-firstTitle.innerText = 'Prothom prothom valo laga'
-
-// Second
-console.log('second file')
-
-// const sections = document.getElementsByClassName('section-item');
-console.log(sections)
-
-// Third
-console.log('third js')
-
-// get the parent
-const thirdList = document.getElementById('third-list');
-console.log(thirdList)
-// create the child
-const li = document.createElement('li');
-li.innerText = 'Brand new list item'
-
-thirdList.appendChild(li)
