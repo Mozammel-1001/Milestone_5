@@ -6,27 +6,27 @@ document.getElementById("cashout-btn").addEventListener("click", function (event
     const pinNumber = getInputValueByID("chashout-pin");
     const mainBalance = getInnerTextByID("main-balance");
 
-if (amount>mainBalance) {
-    alert("invalid amount");
-    return;
-}
+    if (amount > mainBalance) {
+        alert("invalid amount");
+        return;
+    }
 
-    if (accountNumber.length===11) {
-    if (pinNumber===1234) {
-        const sum = mainBalance - amount;
-        setInnerTextByIDandValue("main-balance", sum)
-        
-        const container = document.getElementById("transection-container");
+    if (accountNumber.length === 11) {
+        if (pinNumber === 1234) {
+            const sum = mainBalance - amount;
+            setInnerTextByIDandValue("main-balance", sum)
 
-        const p = document.createElement("p");
-        p.innerText = `
+            const container = document.getElementById("transection-container");
+
+            const p = document.createElement("p");
+            p.innerText = `
         cashout ${amount} from this ${accountNumber} account
         `
-        container.appendChild(p)
+            container.appendChild(p)
 
-    }
-    else {
-        alert("pin not valid")
+        }
+        else {
+            alert("pin not valid")
         }
     }
     else {
